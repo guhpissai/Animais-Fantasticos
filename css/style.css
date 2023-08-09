@@ -97,6 +97,10 @@ body {
   grid-column: 2;
 }
 
+.animais-lista {
+  cursor: pointer;
+}
+
 .animais-lista::-webkit-scrollbar {
   width: 18px;
 }
@@ -209,7 +213,7 @@ body {
   }
 }
 
-.js-tabcontent section {
+.js .js-tabcontent section {
   display: none;
 }
 
@@ -226,5 +230,40 @@ body {
   to {
     opacity: 1;
     transform: translate3d(0, 0, 0);
+  }
+}
+
+.js-faqlista dt {
+  cursor: pointer;
+}
+
+.js-faqlista dt::after {
+  content: '▼';
+  margin-left: 10px;
+}
+
+.js-faqlista dt.active::after {
+  content: '▲';
+  margin-left: 10px;
+}
+
+.js-faqlista dd{
+  display: none;
+}
+
+.js .js-faqlista dd.active {
+  display: block !important;
+  animation: showdd .5s forwards;
+}
+
+
+@keyframes showdd {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 100px;
   }
 }
