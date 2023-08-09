@@ -60,3 +60,26 @@ function smoothScroll() {
 
 smoothScroll();
 
+function initAnimationScroll() {
+  const sections = document.querySelectorAll('.js-scroll')
+
+  if(sections) {
+    const halfWindow = window.innerHeight * 0.6
+
+    function animaScroll() {
+      sections.forEach((section) => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const sectionAnimation = sectionTop - halfWindow < 0
+        if(sectionAnimation) {
+          section.classList.add('active');
+        }
+      })
+    }
+
+    animaScroll();
+
+    window.addEventListener('scroll', animaScroll)
+  }
+}
+
+initAnimationScroll();
