@@ -35,7 +35,7 @@
   }
 }
 
-.ativo {
+.ativo .modal {
   animation: modal 0.3s forwards;
 }
 
