@@ -307,3 +307,29 @@ body {
   opacity: 1;
   transform: translate3d(0, 0, 0);
 }
+
+[data-semana] {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+[data-semana]::after {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: red;
+  border: black 2px solid;
+}
+
+.aberto::after {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgb(33, 202, 33);
+  border: black 2px solid;
+}
